@@ -1,0 +1,110 @@
+-keepattributes SourceFile,LineNumberTable,InnerClasses
+-keep class com.inmobi.** { *; }
+-dontwarn com.inmobi.**
+-dontwarn com.google.android.gms**
+
+-keep class com.android.tripnhome.allapps.AllAppsBackgroundDrawable {
+  public void setAlpha(int);
+  public int getAlpha();
+}
+
+-keep class com.android.tripnhome.BaseRecyclerViewFastScrollBar {
+  public void setThumbWidth(int);
+  public int getThumbWidth();
+  public void setTrackWidth(int);
+  public int getTrackWidth();
+}
+
+-keep class com.android.tripnhome.BaseRecyclerViewFastScrollPopup {
+  public void setAlpha(float);
+  public float getAlpha();
+}
+
+-keep class com.android.tripnhome.BubbleTextView {
+  public void setFastScrollFocus(float);
+  public float getFastScrollFocus();
+}
+
+-keep class com.android.tripnhome.ButtonDropTarget {
+  public int getTextColor();
+}
+
+-keep class com.android.tripnhome.CellLayout {
+  public float getBackgroundAlpha();
+  public void setBackgroundAlpha(float);
+}
+
+-keep class com.android.tripnhome.CellLayout$LayoutParams {
+  public void setWidth(int);
+  public int getWidth();
+  public void setHeight(int);
+  public int getHeight();
+  public void setX(int);
+  public int getX();
+  public void setY(int);
+  public int getY();
+}
+
+-keep class com.android.tripnhome.DragLayer$LayoutParams {
+  public void setWidth(int);
+  public int getWidth();
+  public void setHeight(int);
+  public int getHeight();
+  public void setX(int);
+  public int getX();
+  public void setY(int);
+  public int getY();
+}
+
+-keep class com.android.tripnhome.FastBitmapDrawable {
+  public int getBrightness();
+  public void setBrightness(int);
+}
+
+-keep class com.android.tripnhome.MemoryDumpActivity {
+  *;
+}
+
+-keep class com.android.tripnhome.PreloadIconDrawable {
+  public float getAnimationProgress();
+  public void setAnimationProgress(float);
+}
+
+-keep class com.android.tripnhome.Workspace {
+  public float getBackgroundAlpha();
+  public void setBackgroundAlpha(float);
+}
+
+-keep class * extends java.util.ListResourceBundle {
+  protected Object[][] getContents();
+}
+
+-keep public class com.google.android.gms.common.internal.safeparcel.SafeParcelable {
+  public static final *** NULL;
+}
+
+-keepnames @com.google.android.gms.common.annotation.KeepName class *
+-keepclassmembernames class * {
+  @com.google.android.gms.common.annotation.KeepName *;
+}
+
+-keepnames class * implements android.os.Parcelable {
+  public static final ** CREATOR;
+}
+
+-keep class android.content.res.** { *; }
+-dontwarn android.content.res.*
+
+-keep class android.view.inputmethod.** { *; }
+-dontwarn android.view.inputmethod.*
+
+-keep class com.google.android.gms.common.api.GoogleApiClient { public *; }
+-keep class com.google.android.gms.common.api.GoogleApiClient$* {public *;}
+-keep class com.google.android.gms.location.LocationServices {public *;}
+-keep class com.google.android.gms.location.FusedLocationProviderApi {public *;}
+-keep class com.google.android.gms.location.ActivityRecognition {public *;}
+-keep class com.google.android.gms.location.ActivityRecognitionApi {public *;}
+-keep class com.google.android.gms.location.ActivityRecognitionResult {public *;}
+-keep class com.google.android.gms.location.DetectedActivity {public *;}
+-keep class com.google.android.gms.ads.identifier.AdvertisingIdClient{public *;}
+-keep class com.google.android.gms.ads.identifier.AdvertisingIdClient$Info{public *;}
